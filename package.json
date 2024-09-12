@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "crypto-js": "^4.2.0",
     "gsap": "^3.12.5",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "sass": "^1.78.0"
   }
 }

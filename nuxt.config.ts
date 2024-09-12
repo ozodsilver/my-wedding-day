@@ -13,10 +13,6 @@ export default defineNuxtConfig({
         { property: 'og:description', content: 'Saytingizning tavsifi' },
         { property: 'og:image', content: '~/assets/images/pigeon.png' },
         { property: 'og:url', content: 'https://www.sizning-saytingiz.com' },
-        { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:title', content: 'Sizning Saytingizning Nomini Kiriting' },
-        { property: 'twitter:description', content: 'Saytingizning tavsifi' },
-        { property: 'twitter:image', content: '/path/to/image.jpg' },
       ],
     }
   }
