@@ -15,5 +15,8 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://www.sizning-saytingiz.com' },
       ],
     }
-  }
+  },
+  css: [
+    '~/assets/styles/main.scss',
+  ],
 })

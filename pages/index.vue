@@ -16,12 +16,22 @@ onMounted(() => {
     <wedding-loader/>
   </section>
 
-  <section v-else>
-    <bride-and-groom/>
-  </section>
+  <Transition name="fade" mode="in-out">
+    <section v-if='!loading'>
+      <bride-and-groom/>
+    </section>
+  </Transition>
 
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
