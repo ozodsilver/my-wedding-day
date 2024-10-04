@@ -1,5 +1,5 @@
 <template>
-  <div class="bride">
+  <div class="main">
    <NuxtLayout>
      <NuxtPage />
    </NuxtLayout>
@@ -7,7 +7,5 @@
 </template>
 
 <style lang="scss">
-.bride{
-  @apply bg-slate-200 ;
-}
+
 </style>

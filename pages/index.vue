@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import WeddingLoader from "~/components/wedding-loader.vue";
-import brideAndGroom from '~/components/bridge-and-groom/bride-and-groom.vue'
+import home from '~/components/home.vue'
 
 const loading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
-  }, 5500)
+  }, 6500)
 })
 </script>
 
@@ -18,7 +18,7 @@ onMounted(() => {
 
   <Transition name="fade" mode="in-out">
     <section v-if='!loading'>
-      <bride-and-groom/>
+      <home/>
     </section>
   </Transition>
 
@@ -33,5 +33,9 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.videos {
+  background: #D2D2D2;
 }
 </style>
