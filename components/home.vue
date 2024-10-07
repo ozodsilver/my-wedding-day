@@ -2,6 +2,8 @@
 const route = useNuxtApp()
 import gsap from "gsap";
 
+const showDay = ref(false)
+
 onMounted(() => {
   // left fingers
   gsap.fromTo('.left-fingers',
@@ -15,7 +17,7 @@ onMounted(() => {
         ease: 'circ',
         repeat: 1,
         yoyo: true,
-        repeatDelay: 4 // 4 soniya kutish
+        repeatDelay: 1
       }
   );
 
@@ -26,43 +28,40 @@ onMounted(() => {
         opacity: 1,
         right: 0,
         bottom: 140,
-        duration: 2,
+        duration: 1,
         ease: 'circ',
         repeat: 1,
         yoyo: true,
-        repeatDelay: 4 // 4 soniya kutish
+        repeatDelay: 1
       }
   );
 
   // heart
   gsap.fromTo('.heart',
-      {opacity: 0, right: -70, top: 363},
+      {opacity: 0, right: 160, top: -363},
       {
         opacity: 1,
         right: 160,
-        top: 363,
-        duration: 2,
+        top: 318,
+        duration: 1,
         ease: 'circ',
         repeat: 1,
         yoyo: true,
-        repeatDelay: 4 // 4 soniya kutish
+        repeatDelay: 1 // 4 soniya kutish
       }
   );
 
 
   // left-flower
-  gsap.fromTo('.left-flower',
-      {left: -70, opacity: 0, rotate: -20, bottom: -40},
+  gsap.to('.left-flower',
       {
         left: 0,
         opacity: 1,
         bottom: 0,
         rotate: 0,
         duration: 2,
-        ease: 'elastic',
-        repeat: 1,
-        yoyo: true,
-        repeatDelay: 4 // 4 soniya kutish
+        ease: 'expo',
+        repeatDelay: 1 // 4 soniya kutish
       }
   );
 
@@ -95,19 +94,45 @@ onMounted(() => {
   );
 
   // day
-  gsap.fromTo('.day',
-      { opacity: 0},
+
+  gsap.from('.day',
       {
-y: 40,
-        opacity: 1,
-        duration: 2,
-        ease: 'back.in',
+        y: -140,
+        opacity: 0,
+        delay : 3,
+        duration: 1,
+        ease: 'bounce',
         repeat: 0,
       }
   );
+
+  gsap.from('.month',
+      {
+        y: -180,
+        opacity: 0,
+        delay : 4,
+        duration: 1.2,
+        ease: 'bounce',
+        repeat: 0,
+      }
+  );
+
+  gsap.from('.year',
+      {
+        y: -200,
+        opacity: 0,
+        delay : 5,
+        duration: 1.2,
+        ease: 'bounce',
+        repeat: 0,
+      }
+  );
+
+  showDay.value = false
+  setTimeout(() => {
+    showDay.value = true
+  }, 6000)
 })
-
-
 
 
 </script>
@@ -129,11 +154,11 @@ y: 40,
       <iframe class="absolute animational-flower top-0 left-0"
               src="https://lottie.host/embed/3d3e6064-0834-4318-9f93-42b05e7143da/xSvikz1xKw.json"></iframe>
 
-     <div class="date playfair-display-400">
-       <h1 class="text-[160px] day">23</h1>
-       <h1 class="text-[160px] relative top-[-90px] month">10</h1>
-       <h1 class="text-[160px] relative top-[-190px] year">24</h1>
-     </div>
+        <div class="date playfair-display-400">
+        <h1 class="text-[160px] day">23</h1>
+        <h1 class="text-[160px] relative top-[-90px] month">10</h1>
+        <h1 class="text-[160px] relative top-[-190px] year">24</h1>
+      </div>
     </div>
 
   </section>
@@ -146,13 +171,14 @@ y: 40,
   background-size: cover;
   background-repeat: no-repeat;
 }
-.date{
+
+.date {
   transform: translate(-50%, -50%);
   position: absolute;
-  left:50%;
-  top : 60%;
+  left: 50%;
+  top: 60%;
   margin: 0;
-  color : #05654E;
+  color: #05654E;
 }
 
 </style>
