@@ -19,6 +19,7 @@ onMounted(() => {
   <Transition name="fade" mode="in-out">
     <section v-if='!loading'>
       <home/>
+      <invite-title/>
     </section>
   </Transition>
 

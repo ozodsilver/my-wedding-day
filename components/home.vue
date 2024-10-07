@@ -141,7 +141,7 @@ onMounted(() => {
 <template>
   <section class="home ">
     <!--  <video class="h-[500px] pigeon object-cover" src="~/assets/videos/wedding.mp4" muted autoplay loop  />-->
-    <div class="w-full  h-[600px] border overflow-hidden top-0 z-40 relative">
+    <div class="w-full  h-[600px]  overflow-hidden top-0 z-40 relative">
 
       <img src="~/assets/images/left-fingers.png" class=" w-[180px] absolute left-fingers" alt="">
       <img src="~/assets/images/heart.png" alt="" class="absolute   heart">
