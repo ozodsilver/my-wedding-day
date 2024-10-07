@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import WeddingLoader from "~/components/wedding-loader.vue";
-import home from '~/components/home.vue'
+import home from '~/components/Home.vue'
+import Calendar from "~/components/Calendar.vue";
 
 const loading = ref(true)
 onMounted(() => {
@@ -20,6 +21,9 @@ onMounted(() => {
     <section v-if='!loading'>
       <home/>
       <invite-title/>
+      <Calendar/>
+      <Time/>
+      <Location/>
     </section>
   </Transition>
 
