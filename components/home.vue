@@ -3,54 +3,156 @@ const route = useNuxtApp()
 import gsap from "gsap";
 
 onMounted(() => {
-  gsap.from('.left-fingers', {opacity: 0, duration: 2.9, ease: 'circ', x: -100, y: -30});
-  gsap.to('.left-fingers', {opacity: 1, duration: 2.9, ease: 'circ', x: 0, y: 0});
+  // left fingers
+  gsap.fromTo('.left-fingers',
+      {opacity: 0, left: -80, rotate: -20, bottom: 0},
+      {
+        opacity: 1,
+        left: 0,
+        rotate: 0,
+        bottom: 200,
+        duration: 1,
+        ease: 'circ',
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 4 // 4 soniya kutish
+      }
+  );
 
-
-//   right fingers
-  gsap.from('.right-fingers', {opacity: 0, duration: 2.9, ease: 'circ', right: -300, });
-  gsap.to('.right-fingers', {opacity: 1, duration: 2.9, ease: 'circ', right:0, y: 0});
+  // right fingers
+  gsap.fromTo('.right-fingers',
+      {opacity: 0, right: -300, bottom: 0},
+      {
+        opacity: 1,
+        right: 0,
+        bottom: 140,
+        duration: 2,
+        ease: 'circ',
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 4 // 4 soniya kutish
+      }
+  );
 
   // heart
-  gsap.from('.heart', {opacity: 0, duration: 2.9, ease: 'circ', right: -100, });
-  gsap.to('.heart', {opacity: 1, duration: 2.9, ease: 'circ', right:200,  y: 80});
+  gsap.fromTo('.heart',
+      {opacity: 0, right: -70, top: 363},
+      {
+        opacity: 1,
+        right: 160,
+        top: 363,
+        duration: 2,
+        ease: 'circ',
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 4 // 4 soniya kutish
+      }
+  );
 
+
+  // left-flower
+  gsap.fromTo('.left-flower',
+      {left: -70, opacity: 0, rotate: -20, bottom: -40},
+      {
+        left: 0,
+        opacity: 1,
+        bottom: 0,
+        rotate: 0,
+        duration: 2,
+        ease: 'elastic',
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 4 // 4 soniya kutish
+      }
+  );
+
+  // right flower
+  gsap.fromTo('.right-flower',
+      {right: -70, opacity: 0, top: 0},
+      {
+        right: 0,
+        opacity: 1,
+        top: 0,
+        rotate: 0,
+        duration: 2,
+        ease: 'elastic',
+        repeat: 0,
+      }
+  );
+
+
+  gsap.fromTo('.animational-flower',
+      {left: -90, opacity: 0, top: 0},
+      {
+        left: -70,
+        opacity: 1,
+        top: 0,
+        rotate: 0,
+        duration: 2,
+        ease: 'back.in',
+        repeat: 0,
+      }
+  );
+
+  // day
+  gsap.fromTo('.day',
+      { opacity: 0},
+      {
+y: 40,
+        opacity: 1,
+        duration: 2,
+        ease: 'back.in',
+        repeat: 0,
+      }
+  );
 })
+
+
+
 
 </script>
 
+
 <template>
-  <section class="home relative">
+  <section class="home ">
     <!--  <video class="h-[500px] pigeon object-cover" src="~/assets/videos/wedding.mp4" muted autoplay loop  />-->
-    <div class="w-full  h-[700px] top-0 z-40 ">
+    <div class="w-full  h-[600px] border overflow-hidden top-0 z-40 relative">
 
-      <img src="~/assets/images/left-fingers.png" class="top-[300px] absolute left-fingers" alt="">
-      <img src="~/assets/images/heart.png" alt="" class="absolute top-[300px]  heart">
-      <img src="~/assets/images/right-fingers.png" alt="" class="top-[300px] absolute right-fingers">
-      
+      <img src="~/assets/images/left-fingers.png" class=" w-[180px] absolute left-fingers" alt="">
+      <img src="~/assets/images/heart.png" alt="" class="absolute   heart">
+      <img src="~/assets/images/right-fingers.png" alt="" class=" w-[180px] absolute right-fingers">
 
-<!--      <Transition name="fade">-->
-<!--        <iframe class="absolute top-animation-flower top-0 left-[-87px]"-->
-<!--                src="https://lottie.host/embed/3d3e6064-0834-4318-9f93-42b05e7143da/xSvikz1xKw.json"></iframe>-->
-<!--      </Transition>-->
+      <img src="~/assets/images/bottom-left-flower.png" alt="" class="left-flower w-[180px] absolute">
+      <img src="~/assets/images/top-right-flower.png" alt="" class="right-flower w-[180px] absolute">
 
+
+      <iframe class="absolute animational-flower top-0 left-0"
+              src="https://lottie.host/embed/3d3e6064-0834-4318-9f93-42b05e7143da/xSvikz1xKw.json"></iframe>
+
+     <div class="date playfair-display-400">
+       <h1 class="text-[160px] day">23</h1>
+       <h1 class="text-[160px] relative top-[-90px] month">10</h1>
+       <h1 class="text-[160px] relative top-[-190px] year">24</h1>
+     </div>
     </div>
 
-    <!--    <div class="border w-full  flex items-center justify-center text-[40px] italic dancing-script-700 bg-fixed h-[60px]  bg-gradient-to-br">-->
-    <!--      <h1 class="text-slate-600">12/03/1992</h1>-->
-    <!--    </div>-->
-
-    <!--  <img class="w-[40%] float-right pigeon" src="~/assets/images/pigeon.png" alt="">-->
   </section>
 </template>
 
 <style lang="scss" scoped>
-.home{
+.home {
   background-image: url("/assets/images/bg-home.svg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-
+}
+.date{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left:50%;
+  top : 60%;
+  margin: 0;
+  color : #05654E;
 }
 
 </style>
