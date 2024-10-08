@@ -37,7 +37,7 @@ onMounted(() => {
   gsap.fromTo('.left-fingerss', {
     x: '-150%',  // Begin far off-screen to the left
   }, {
-    x: '50%',     // Animate to its normal position
+    x: '30%',     // Animate to its normal position
     scrollTrigger: {
       trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
       start: 'top bottom',   // When the top of .border hits the bottom of the viewport
@@ -49,7 +49,7 @@ onMounted(() => {
   gsap.fromTo('.right-fingerss', {
     x: '150%',   // Begin far off-screen to the right
   }, {
-    x: '-50%',     // Animate to its normal position
+    x: '-30%',     // Animate to its normal position
     scrollTrigger: {
       trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
       start: 'top bottom',   // When the top of .border hits the bottom of the viewport
@@ -68,7 +68,7 @@ onMounted(() => {
       <h1 class="text-[70px] text-center relative fazoda">Фазода</h1>
     </div>
 
-    <div class=" flex relative items-center h-[200px]">
+    <div class="border flex relative items-center h-[200px]">
       <img src="~/assets/images/left-fingers.png" class="w-[150px] absolute left-0 left-fingerss" alt="">
       <img src="~/assets/images/right-fingers.png" class="w-[150px] absolute right-0 top-[50px] right-fingerss" alt="">
     </div>
