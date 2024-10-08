@@ -33,30 +33,36 @@ onMounted(() => {
     });
   }
 
-  // ScrollTrigger bilan finger rasmlarini harakatlantirish
-  gsap.fromTo('.left-fingerss', {
-    x: '-150%',  // Begin far off-screen to the left
-  }, {
-    x: '40%',     // Animate to its normal position
-    scrollTrigger: {
-      trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
-      start: 'top bottom',   // When the top of .border hits the bottom of the viewport
-      end: 'top 100px',      // End when it's 100px from the top
-      scrub: true,           // Smoothly animate in sync with scroll
-    }
-  });
+  const leftFinger = document.querySelector('.left-fingers') as HTMLElement
+  const rightFinger = document.querySelector('.right-fingers') as HTMLElement
 
-  gsap.fromTo('.right-fingerss', {
-    x: '150%',   // Begin far off-screen to the right
-  }, {
-    x: '-40%',     // Animate to its normal position
-    scrollTrigger: {
-      trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
-      start: 'top bottom',   // When the top of .border hits the bottom of the viewport
-      end: 'top 100px',      // End when it's 100px from the top
-      scrub: true,           // Smoothly animate in sync with scroll
-    }
-  });
+  if(leftFinger && rightFinger){
+    // ScrollTrigger bilan finger rasmlarini harakatlantirish
+    gsap.fromTo('.left-fingerss', {
+      x: '-150%',  // Begin far off-screen to the left
+    }, {
+      x: '40%',     // Animate to its normal position
+      scrollTrigger: {
+        trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
+        start: 'top bottom',   // When the top of .border hits the bottom of the viewport
+        end: 'top 180px',      // End when it's 100px from the top
+        scrub: true,           // Smoothly animate in sync with scroll
+      }
+    });
+
+    gsap.fromTo('.right-fingerss', {
+      x: '150%',   // Begin far off-screen to the right
+    }, {
+      x: '-40%',     // Animate to its normal position
+      scrollTrigger: {
+        trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
+        start: 'top bottom',   // When the top of .border hits the bottom of the viewport
+        end: 'top 100px',      // End when it's 100px from the top
+        scrub: true,           // Smoothly animate in sync with scroll
+      }
+    });
+  }
+
 });
 </script>
 
@@ -68,9 +74,9 @@ onMounted(() => {
       <h1 class="text-[70px] text-center relative fazoda">Фазода</h1>
     </div>
 
-    <div class=" flex relative items-center mt-16 h-[200px]">
-      <img src="~/assets/images/left-fingers.png" class="w-[150px]  left-0 left-fingerss" alt="">
-      <img src="~/assets/images/right-fingers.png" class="w-[150px]  right-0 top-[50px] right-fingerss" alt="">
+    <div class="border flex relative items-center mt-[100px] h-[200px]">
+      <img src="~/assets/images/left-fingers.png" class="w-[150px] absolute left-0 left-fingerss" alt="">
+      <img src="~/assets/images/right-fingers.png" class="w-[150px] absolute right-0 top-[50px] right-fingerss" alt="">
     </div>
 
     <div class="flex justify-center my-[20px]">
