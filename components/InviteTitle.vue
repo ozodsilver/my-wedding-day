@@ -32,10 +32,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="yekatirina relative px-5 text-[#05654E] pt-[90px]">
+  <div class="yekatirina pt-20 relative px-5 text-[#05654E] ">
     <h1 class="text-[70px] ozodxon">Озодхон</h1>
-    <h2 class="text-[60px] font-normal text-center absolute left-[80px]">&</h2>
-    <h1 class="text-[70px] text-center relative left-[50px] fazoda">Фазода</h1>
+    <h2 class="text-[60px] font-normal text-center relative top-[-25px]">&</h2>
+    <h1 class="text-[70px] text-center relative  fazoda">Фазода</h1>
 
     <div class="flex justify-center my-[20px]">
       <img src="~/assets/images/list.svg" alt="">
