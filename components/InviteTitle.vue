@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="yekatirina relative px-5 text-[#05654E] pt-[50px]">
+  <div class="yekatirina relative px-5 text-[#05654E] pt-[90px]">
     <h1 class="text-[70px] ozodxon">Озодхон</h1>
     <h2 class="text-[60px] font-normal text-center absolute left-[80px]">&</h2>
     <h1 class="text-[70px] text-center relative left-[50px] fazoda">Фазода</h1>

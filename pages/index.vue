@@ -22,6 +22,7 @@ onMounted(() => {
       <home/>
       <invite-title/>
       <Calendar/>
+      <Sunnah/>
       <Time/>
       <Location/>
     </section>

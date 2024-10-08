@@ -2,8 +2,8 @@
 
   <div class=" relative">
     <img src="~/assets/images/splitter-heart.png" alt="" class="mx-auto mt-6">
-    <img src="~/assets/images/calendar-flower-left.svg" alt="" class="absolute left-0 top-[90px]">
-    <img src="~/assets/images/calendar-flower-right.svg" alt="" class="absolute right-0 top-0">
+    <img src="~/assets/images/calendar-flower-left.svg" alt="" class="absolute z-50 left-0 top-[90px]">
+    <img src="~/assets/images/calendar-flower-right.svg" alt="" class="absolute z-[50] right-0 top-0">
 
 
   </div>

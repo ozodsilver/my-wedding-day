@@ -1,4 +1,10 @@
 <template>
+
+  <div class="flex flex-col">
+    <h1 class="text-center alegreya text-[#05654E] text-[70px] mt-8">19:00</h1>
+    <p class="alegreya text-lg text-center text-[#05654E]">Chorshanba</p>
+  </div>
+
   <div class="countdown-container alegreya">
     <div class="countdown-box">
       <div class="countdown-element">
@@ -22,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import {ref, onMounted, onUnmounted} from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -55,7 +61,7 @@ onMounted(() => {
   // GSAP ScrollTrigger orqali animatsiyani sozlash
   gsap.from(".time", {
     x: -100,              // Chapdan kelish
-    opacity: 0,           // Dastlab shaffof bo'ladi
+    opacity: 1,           // Dastlab shaffof bo'ladi
     rotation: -360,       // 360 daraja aylanadi
     duration: 1.5,        // Animatsiya davomiyligi
     rotateZ: 50,
