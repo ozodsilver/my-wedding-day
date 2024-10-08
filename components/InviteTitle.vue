@@ -69,8 +69,8 @@ onMounted(() => {
     </div>
 
     <div class=" flex relative items-center mt-16 h-[200px]">
-      <img src="~/assets/images/left-fingers.png" class="w-[150px] absolute left-0 left-fingerss" alt="">
-      <img src="~/assets/images/right-fingers.png" class="w-[150px] absolute right-0 top-[50px] right-fingerss" alt="">
+      <img src="~/assets/images/left-fingers.png" class="w-[150px]  left-0 left-fingerss" alt="">
+      <img src="~/assets/images/right-fingers.png" class="w-[150px]  right-0 top-[50px] right-fingerss" alt="">
     </div>
 
     <div class="flex justify-center my-[20px]">
