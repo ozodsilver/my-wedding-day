@@ -2,19 +2,19 @@
   <div class="countdown-container alegreya">
     <div class="countdown-box">
       <div class="countdown-element">
-        <span class="time">{{ days }}</span>
+        <span class="time days">{{ days }}</span>
         <span class="label">кун</span>
       </div>
       <div class="countdown-element">
-        <span class="time">{{ hours }}</span>
+        <span class="time hours">{{ hours }}</span>
         <span class="label">соат</span>
       </div>
       <div class="countdown-element">
-        <span class="time">{{ minutes }}</span>
+        <span class="time minutes">{{ minutes }}</span>
         <span class="label">дақиқа</span>
       </div>
       <div class="countdown-element">
-        <span class="time">{{ seconds }}</span>
+        <span class="time seconds">{{ seconds }}</span>
         <span class="label">сония</span>
       </div>
     </div>
@@ -23,8 +23,13 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-// Countdown vaqtini hisoblash uchun to'g'ri formatda deadline kiritish (masalan, ma'lum bir sanani belgilash)
+// ScrollTrigger plaginini ro'yxatdan o'tkazish
+gsap.registerPlugin(ScrollTrigger);
+
+// Countdown vaqtini hisoblash uchun to'g'ri formatda deadline kiritish
 const deadline = new Date('2024-10-23T00:00:00').getTime();
 
 // Har bir countdown elementi uchun reaktiv o'zgaruvchilar
@@ -46,6 +51,25 @@ const updateCountdown = () => {
 onMounted(() => {
   updateCountdown();
   const interval = setInterval(updateCountdown, 1000); // 1 sekundda bir marta yangilash
+
+  // GSAP ScrollTrigger orqali animatsiyani sozlash
+  gsap.from(".time", {
+    x: -100,              // Chapdan kelish
+    opacity: 0,           // Dastlab shaffof bo'ladi
+    rotation: -360,       // 360 daraja aylanadi
+    duration: 1.5,        // Animatsiya davomiyligi
+    rotateZ: 50,
+    y: -120,
+    ease: "bounce.in",   // Silliq chiqish harakati
+    stagger: 0.9,         // Har bir elementning ketma-ket kelishi
+    scrollTrigger: {
+      trigger: ".countdown-container", // Sahifani qaysi qismida kuzatilishi kerak
+      start: "top 80%",      // Sahifa scroll qilinib, bu element yuqori qismining 80% ga yetganda animatsiya boshlanadi
+      end: "bottom 60%",     // Sahifaning qaysi qismi scroll qilinganda animatsiya tugaydi
+      scrub: true,           // Scroll harakati davomida animatsiya real vaqt rejimida ishlaydi
+      markers: false         // Animatsiya qachon boshlanayotganini ko'rsatuvchi markerlar
+    }
+  });
 
   onUnmounted(() => {
     clearInterval(interval); // Komponent o'chirilganda intervalni tozalash
