@@ -1,8 +1,8 @@
 <template>
 
   <div class="flex flex-col">
-    <h1 class="text-center alegreya text-[#05654E] text-[70px] mt-8">19:00</h1>
-    <p class="alegreya text-lg text-center text-[#05654E]">Chorshanba</p>
+    <h1 class="text-center alegreya text-[#05654E] text-[70px] mt-8">17:00</h1>
+    <p class="alegreya text-lg text-center text-[#05654E]">Чоршанба</p>
   </div>
 
   <div class="countdown-container alegreya">

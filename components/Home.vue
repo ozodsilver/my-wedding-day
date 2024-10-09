@@ -36,20 +36,6 @@ onMounted(() => {
       }
   );
 
-  // heart
-  gsap.fromTo('.heart',
-      {opacity: 0, right: 160, top: -363},
-      {
-        opacity: 1,
-        right: 160,
-        top: 318,
-        duration: 1,
-        ease: 'circ',
-        repeat: 1,
-        yoyo: true,
-        repeatDelay: 1 // 4 soniya kutish
-      }
-  );
 
 
   // left-flower
@@ -144,7 +130,7 @@ onMounted(() => {
     <div class="w-full  h-[600px]  overflow-hidden top-0 z-40 relative">
 
       <img src="~/assets/images/left-fingers.png" class=" w-[180px] absolute left-fingers" alt="">
-      <img src="~/assets/images/heart.png" alt="" class="absolute   heart">
+
       <img src="~/assets/images/right-fingers.png" alt="" class=" w-[180px] absolute right-fingers">
 
       <img src="~/assets/images/bottom-left-flower.png" alt="" class="left-flower w-[180px] absolute">

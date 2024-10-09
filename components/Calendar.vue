@@ -10,7 +10,7 @@
   <div class="calendar-container">
 
     <div class="header">
-      <h1 class="text-[#05654E] text-[32px]">Октябр</h1>
+      <h1 class="text-[#05654E] text-[32px]">Октябрь</h1>
     </div>
     <div class="calendar-grid">
 

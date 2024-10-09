@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import gsap from 'gsap';
-import { onMounted } from 'vue';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {onMounted} from 'vue';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,12 +36,12 @@ onMounted(() => {
   const leftFinger = document.querySelector('.left-fingers') as HTMLElement
   const rightFinger = document.querySelector('.right-fingers') as HTMLElement
 
-  if(leftFinger && rightFinger){
+  if (leftFinger && rightFinger) {
     // ScrollTrigger bilan finger rasmlarini harakatlantirish
     gsap.fromTo('.left-fingerss', {
       x: '-150%',  // Begin far off-screen to the left
     }, {
-      x: '40%',     // Animate to its normal position
+      x: '38%',     // Animate to its normal position
       scrollTrigger: {
         trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
         start: 'top bottom',   // When the top of .border hits the bottom of the viewport
@@ -53,11 +53,11 @@ onMounted(() => {
     gsap.fromTo('.right-fingerss', {
       x: '150%',   // Begin far off-screen to the right
     }, {
-      x: '-40%',     // Animate to its normal position
+      x: '-38%',     // Animate to its normal position
       scrollTrigger: {
         trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
         start: 'top bottom',   // When the top of .border hits the bottom of the viewport
-        end: 'top 100px',      // End when it's 100px from the top
+        end: 'top 300px',      // End when it's 100px from the top
         scrub: true,           // Smoothly animate in sync with scroll
       }
     });
@@ -74,7 +74,7 @@ onMounted(() => {
       <h1 class="text-[70px] text-center relative fazoda">Фазода</h1>
     </div>
 
-    <div class="border flex relative items-center mt-[100px] h-[200px]">
+    <div class="border border-transparent flex relative items-center mt-[100px] h-[200px]">
       <img src="~/assets/images/left-fingers.png" class="w-[150px] absolute left-0 left-fingerss" alt="">
       <img src="~/assets/images/right-fingers.png" class="w-[150px] absolute right-0 top-[50px] right-fingerss" alt="">
     </div>
@@ -85,7 +85,12 @@ onMounted(() => {
   </div>
 
   <div class="title text-center text-[#05654E] mt-2 font-[500] px-3">
-    <p>Азиз {{route.query.message}} қариндошлар ва дўстлар! Биз сизга тўйимиз ҳақида хабар беришдан мамнунмиз, биз учун бу муҳим кунни сиз билан баҳам кўришдан хурсанд бўламиз</p>
+    <p> Ҳурматли <span class=" text-blue-600 text-bold text-lg italic">Умар Маматов</span>,
+      сизни ҳаёт деб аталмиш, муқаддас қасрга қадам қўяётган муҳаббат ниҳоллари, <span
+          class="text-xl  italic">Озодхон</span> ва <span class="text-xl  italic">Фазода</span>
+      <br> ларнинг умр баҳорининг унутилмас куни 23-Октябрь 17:00 да бўлиб ўтадиган никоҳ оқшомига таклиф этамиз.</p>
+    <br>
+    <p class = 'text-end'>Хурмат билан: Салохиддинов ва Омоновлар оиласи</p>
   </div>
 </template>
 
