@@ -136,10 +136,6 @@ onMounted(() => {
       <img src="~/assets/images/bottom-left-flower.png" alt="" class="left-flower w-[180px] absolute">
       <img src="~/assets/images/top-right-flower.png" alt="" class="right-flower w-[180px] absolute">
 
-
-      <iframe class="absolute animational-flower top-0 left-0"
-              src="https://lottie.host/embed/3d3e6064-0834-4318-9f93-42b05e7143da/xSvikz1xKw.json"></iframe>
-
         <div class="date playfair-display-400">
         <h1 class="text-[160px] day">23</h1>
         <h1 class="text-[160px] relative top-[-90px] month">10</h1>

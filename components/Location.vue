@@ -1,32 +1,24 @@
 <template>
   <img src="~/assets/images/splitter-heart.png" class="mx-auto" alt="">
-  <h1 class="text-[40px] alegreya text-[#05654E] text-center">Bazmgoh manzili</h1>
+
   <i class="fas fa-location-dot text-red-600"></i>
-  <p class="text-center text-[#05654E]">Иштихон тумани: <span class="font-bold ">Богдод</span> базмгохи</p>
-
-  <p class="text-[#05654E] w-[80%]  mx-auto text-center">Cизнинг жойлашувингиздан, Базмгоҳгача бўлган масофа: <span
-      class="italic font-bold" v-if="distance">{{ distance.toFixed(2) }} km(live)</span></p>
-  <p v-if="error" class="text-red-600">{{ error }}</p>
-
+  <p class="text-center text-[#05654E] text-xl py-6">Иштихон тумани: <span class="font-bold ">Богдод</span> базмгохи</p>
 
   <div class="layout-container flex justify-between rounded-lg bg-[#f2f4f3] max-w-4xl mx-auto my-5">
     <!-- O'ng tomondagi rasm qismi -->
     <div class="image-container flex items-center justify-center relative p-5">
       <img src="~/assets/images/bagdad.png" alt="Banquet Hall" class="location-image w-3/4 rounded-lg img-anim"/>
-      <img src="~/assets/images/bagdad-two.png" alt="Banquet Hall"
-           class="location-image w-2/4 bottom-[-40px] right-6 absolute rounded-lg img-anim"/>
-      <img src="~/assets/images/bagdad3.png" alt="Banquet Hall"
-           class="location-image w-2/4 bottom-[-60px] left-6 absolute rounded-lg img-anim"/>
+
     </div>
   </div>
 
-  <div class="mt-20">
+  <div class="mt-10">
     <a target="_blank" href="https://maps.app.goo.gl/Kd1RC6EzySmSigp77"
-       class="w-[90%] text-center bg-[#05654E] mx-auto block p-3 px-5 text-white rounded-lg ">Открыть карту</a>
+       class="w-[90%] rounded-full text-center bg-[#05654E] mx-auto block p-3 px-5 text-white ">Открыть карту</a>
   </div>
 
   <img src="~/assets/images/splitter-heart.png" class="mx-auto block py-10" alt="">
-  <h1 class="text-center py-2 text-sky-600 pb-10 text-lg">Сизни мамнуният билан кутамиз!</h1>
+
 </template>
 
 <script setup lang="ts">
@@ -58,54 +50,7 @@ onMounted(() => {
   );
 });
 
-// Masofani saqlash uchun o'zgaruvchi
-const distance = ref<number | null>(null);
-const error = ref<string | null>(null);
 
-// Maqsadli joylashuv (Ishtixon Bog'dod bazmgohi)
-const targetLocation = {
-  lat: 39.97014726071552, // Bog'dod bazmgohi kengligi
-  lng: 66.4638628380789  // Bog'dod bazmgohi uzunligi
-};
-
-// Haversine formulasi yordamida masofani hisoblash funktsiyasi
-function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
-  const toRad = (value: number) => (value * Math.PI) / 180;
-
-  const R = 6371; // Yer radiusi, km
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
-
-  const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-      Math.sin(dLon / 2) * Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c; // Masofa, km
-}
-
-// Foydalanuvchining hozirgi joylashuvini olish
-onMounted(() => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const {latitude, longitude} = position.coords;
-          // Masofani hisoblash
-          distance.value = calculateDistance(
-              latitude,
-              longitude,
-              targetLocation.lat,
-              targetLocation.lng
-          );
-        },
-        (err) => {
-          error.value = "Жойлашувни аниклаб булмади: " + err.message;
-        }
-    );
-  } else {
-    error.value = "Geolocation API qo'llab-quvvatlanmaydi.";
-  }
-});
 </script>
 
 <style scoped>

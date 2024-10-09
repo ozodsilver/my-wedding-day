@@ -41,7 +41,7 @@ onMounted(() => {
     gsap.fromTo('.left-fingerss', {
       x: '-150%',  // Begin far off-screen to the left
     }, {
-      x: '38%',     // Animate to its normal position
+      x: '30%',     // Animate to its normal position
       scrollTrigger: {
         trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
         start: 'top bottom',   // When the top of .border hits the bottom of the viewport
@@ -53,7 +53,7 @@ onMounted(() => {
     gsap.fromTo('.right-fingerss', {
       x: '150%',   // Begin far off-screen to the right
     }, {
-      x: '-38%',     // Animate to its normal position
+      x: '-30%',     // Animate to its normal position
       scrollTrigger: {
         trigger: '.border',    // ScrollTrigger boshlanish nuqtasi
         start: 'top bottom',   // When the top of .border hits the bottom of the viewport
@@ -74,7 +74,7 @@ onMounted(() => {
       <h1 class="text-[70px] text-center relative fazoda">Фазода</h1>
     </div>
 
-    <div class="border border-transparent flex relative items-center mt-[100px] h-[200px]">
+    <div class="border border-transparent flex relative items-center mt-[70px] h-[200px]">
       <img src="~/assets/images/left-fingers.png" class="w-[150px] absolute left-0 left-fingerss" alt="">
       <img src="~/assets/images/right-fingers.png" class="w-[150px] absolute right-0 top-[50px] right-fingerss" alt="">
     </div>
@@ -85,12 +85,12 @@ onMounted(() => {
   </div>
 
   <div class="title text-center text-[#05654E] mt-2 font-[500] px-3">
-    <p> Ҳурматли <span class=" text-blue-600 text-bold text-lg italic">Умар Маматов</span>,
+    <p> Ҳурматли <span class=" text-bold text-lg ">Умар Маматов</span>,
       сизни ҳаёт деб аталмиш, муқаддас қасрга қадам қўяётган муҳаббат ниҳоллари, <span
           class="text-xl  italic">Озодхон</span> ва <span class="text-xl  italic">Фазода</span>
       <br> ларнинг умр баҳорининг унутилмас куни 23-Октябрь 17:00 да бўлиб ўтадиган никоҳ оқшомига таклиф этамиз.</p>
     <br>
-    <p class = 'text-center text-black'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span> ва  <span class="italic font-bold">Омонов</span> лар оиласи</p>
+    <p class = 'text-center text-[#05654E]'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span> ва  <span class="italic font-bold">Омонов</span> лар оиласи</p>
   </div>
 </template>
 
