@@ -6,6 +6,7 @@
 
   <p class="text-[#05654E] w-[80%]  mx-auto text-center">Cизнинг жойлашувингиздан, Базмгоҳгача бўлган масофа: <span
       class="italic font-bold" v-if="distance">{{ distance.toFixed(2) }} km(live)</span></p>
+  <p v-if="error" class="text-red-600">{{ error }}</p>
 
 
   <div class="layout-container flex justify-between rounded-lg bg-[#f2f4f3] max-w-4xl mx-auto my-5">
@@ -23,6 +24,9 @@
     <a target="_blank" href="https://maps.app.goo.gl/Kd1RC6EzySmSigp77"
        class="w-[90%] text-center bg-[#05654E] mx-auto block p-3 px-5 text-white rounded-lg ">Открыть карту</a>
   </div>
+
+  <img src="~/assets/images/splitter-heart.png" class="mx-auto block py-10" alt="">
+  <h1 class="text-center py-2 text-sky-600 pb-10 text-lg">Сизни мамнуният билан кутамиз!</h1>
 </template>
 
 <script setup lang="ts">
@@ -95,7 +99,7 @@ onMounted(() => {
           );
         },
         (err) => {
-          error.value = "Joylashuvni aniqlab bo'lmadi: " + err.message;
+          error.value = "Жойлашувни аниклаб булмади: " + err.message;
         }
     );
   } else {
