@@ -5,12 +5,12 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app:{
     head : {
-      title : 'Nikoh Ozodxon va Fazoda',
+      title : 'Ozodxon & Fazoda',
       meta: [
         { name: 'description', content: 'Bu bizning hayotimizdagi eng muhim kunlardan biri!' },
         { property: 'og:title', content: "Hurmatli mehmon" },
         { property: 'og:description', content: 'Bizning hayotimizning unutilmas kunida - siz ham biz bilan birga bo‘ling!' },
-        { property: 'og:image', content: '/assets/images/metaImage.webp' },
+        { property: 'og:image', content: 'https://myweddingday.vercel.app/assets/images/metaImage.webp' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:url', content: 'https://myweddingday.vercel.app/' },
