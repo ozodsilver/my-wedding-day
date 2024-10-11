@@ -84,13 +84,12 @@ onMounted(() => {
     </div>
   </div>
 
-  <div class="title text-center text-[#05654E] mt-2 font-[500] px-3">
-    <p> Ҳурматли <span class=" text-bold text-lg ">{{route.query.name}}</span>,
-      сизни ҳаёт деб аталмиш, муқаддас қасрга қадам қўяётган муҳаббат ниҳоллари, <span
-          class="text-xl  italic">Озодхон</span> ва <span class="text-xl  italic">Фазода</span>
-      <br> ларнинг умр баҳорининг унутилмас куни 23-Октябрь 17:00 да бўлиб ўтадиган никоҳ оқшомига таклиф этамиз.</p>
+  <div class="title text-start text-[#05654E] mt-2 font-[500] pl-5">
+    <p> <span class="text-start">Ҳурматли <span class=" text-bold text-lg ">{{route.query.name}}</span></span>, <br>сизни ҳаёт деб аталмиш, муқаддас қасрга қадам қўяётган муҳаббат ниҳоллари, <span
+          class="text-xl  italic"></span> <span class="block text-center text-xl italic">Озодхон ва <span class="text-xl  italic">Фазода</span> </span>
+     ларнинг умр баҳорининг унутилмас куни <br> 23-Октябрь 17:00 да бўлиб ўтадиган никоҳ оқшомига таклиф этамиз.</p>
     <br>
-    <p class = 'text-center text-[#05654E]'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span> ва  <span class="italic font-bold">Омонов</span> лар оиласи</p>
+    <p class = 'text-start text-[#05654E]'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span> ва  <span class="italic font-bold">Омонов</span> лар оиласи</p>
   </div>
 </template>
 

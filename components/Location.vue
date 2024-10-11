@@ -2,7 +2,7 @@
   <img src="~/assets/images/splitter-heart.png" class="mx-auto" alt="">
 
   <i class="fas fa-location-dot text-red-600"></i>
-  <p class="text-center text-[#05654E] text-xl py-6">Иштихон тумани: <span class="font-bold ">Богдод</span> базмгохи</p>
+  <p class="text-center text-[#05654E] text-base py-6">Иштихон тумани: <span class="font-bold ">Богдод</span> базмгохи</p>
 
   <div class="layout-container flex justify-between rounded-lg bg-[#f2f4f3] max-w-4xl mx-auto my-5">
     <!-- O'ng tomondagi rasm qismi -->
