@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       title : 'Ozodxon & Fazoda',
       meta: [
         { name: 'description', content: 'Bu bizning hayotimizdagi eng muhim kunlardan biri!' },
-        { property: 'og:title', content: `Hurmatli mehmon` },
+        { property: 'og:title', content: 'Hurmatli mehmon' },
         { property: 'og:description', content: 'Bizning hayotimizning unutilmas kunida - siz ham biz bilan birga bo‘ling!' },
         { property: 'og:image', content: 'https://myweddingday.vercel.app/metaImage.png' },
         { property: 'og:image:type', content: 'image/png' },
