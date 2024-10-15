@@ -89,7 +89,7 @@ onMounted(() => {
           class="text-xl  italic"></span> <span class="block text-center text-xl italic">Озодхон ва <span class="text-xl  italic">Фазода</span> </span>
      ларнинг умр баҳорининг унутилмас куни <br> 23-Октябрь 17:00 да бўлиб ўтадиган никоҳ оқшомига таклиф этамиз.</p>
     <br>
-    <p class = 'text-start text-[#05654E]'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span> ва  <span class="italic font-bold">Омонов</span> лар оиласи</p>
+    <p class = 'text-start text-[#05654E]'>Хурмат билан: <span class="italic font-bold">Салохиддинов</span>лар оиласи</p>
   </div>
 </template>
 
