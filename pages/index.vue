@@ -18,8 +18,9 @@ onMounted(() => {
     <wedding-loader/>
   </section>
 
+
   <Transition name="fade" mode="in-out">
-    <section v-if='!loading'>
+    <section class="max-w-[400px] mx-auto" v-if='!loading'>
       <home/>
       <invite-title/>
       <Calendar/>
